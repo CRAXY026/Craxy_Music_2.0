@@ -10,24 +10,24 @@ def start_pannel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
     buttons = [
         [
             InlineKeyboardButton(
-                text="🙁 ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴩ 🙁",
+                text="•Aᴅᴅ ᴍᴇ ʙᴀʙʏ•",
                 url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
             )
         ],
         [
             InlineKeyboardButton(
-                text="➥ʜᴇʟᴩ",
+                text="•ʜᴇʟᴩ•",
                 callback_data="settings_back_helper",
             ),
             InlineKeyboardButton(
-                text="➥sᴇᴛᴛɪɴɢs", callback_data="settings_helper"
+                text="•sᴇᴛᴛɪɴɢs•", callback_data="settings_helper"
             ),
         ],
         [
             InlineKeyboardButton(
-                text="➥ᴍᴀɪɴᴛᴀɪɴᴇʀ", user_id=OWNER),
+                text="•Mᴏɪ ᴏᴡɴᴇʀ•", user_id=OWNER),
             InlineKeyboardButton(
-                text="➥sᴜᴩᴩᴏʀᴛ", url=config.SUPPORT_GROUP
+                text="•ɢʀᴏᴜᴩ•", url=f"{config.SUPPORT_GROUP}"
             ),
         ],
      ]
@@ -38,25 +38,27 @@ def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
     buttons = [
         [
             InlineKeyboardButton(
-                text="🥺 ᴀᴅᴅ ᴍᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴅᴏsᴛ 🥺",
+                text="•Aᴅᴅ ᴍᴇ ʙᴀʙʏ•",
                 url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
             ),
         ],
         [
             InlineKeyboardButton(
-                text="➦ʜᴇʟᴩ", callback_data="settings_back_helper"
-            ),
-        ],
-        [
-            InlineKeyboardButton(text="➦ᴍᴀɪɴᴛᴀɪɴᴇʀ", user_id=OWNER),
-            InlineKeyboardButton(
-                tetext➦sᴜᴩᴩᴏʀᴛ", url=config.SUPPORT_GROUP
+                text="•ʜᴇʟᴩ•", callback_data="settings_back_helper"
             ),
         ],
         [
             InlineKeyboardButton(
-                    text="➦sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ", url=config.UPSTREAM_REPO
-                )
+                text="•ᴄʜᴀɴɴᴇʟ•", url=f"{config.SUPPORT_CHANNEL}"
+            ),
+            InlineKeyboardButton(
+                text="•ɢʀᴏᴜᴩ•", url=f"{config.SUPPORT_GROUP}"
+            ),
         ],
+        [
+            InlineKeyboardButton(
+                    text="•Mᴏɪ ᴏᴡɴᴇʀ•", url=f"user_id=OWNER", 
+            ),  
+          ],
      ]
     return buttons
