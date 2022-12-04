@@ -6,7 +6,7 @@ from Craxy import app
 @app.on_message(filters.command(["github", "git"]))
 async def github(_, message):
     if len(message.command) != 2:
-        await message.reply_text("/git CraxymousR1025")
+        await message.reply_text("/git Craxy026")
         return
     username = message.text.split(None, 1)[1]
     URL = f'https://api.github.com/users/{username}'
