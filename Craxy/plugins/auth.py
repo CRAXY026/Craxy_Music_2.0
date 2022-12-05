@@ -26,7 +26,7 @@ AUTHUSERS_COMMAND = get_command("AUTHUSERS_COMMAND")
 async def auth(client, message: Message, _):
     if not message.reply_to_message:
         if len(message.command) != 2:
-            return await message.reply_text("**» ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴜsᴇʀ's ᴍᴇssᴀɢᴇ ᴏʀ ɢɪᴠᴇ ᴜsᴇʀɴᴀᴍᴇ/ᴜsᴇʀ_ɪᴅ.**")
+            return await message.reply_text("**» ʀᴇᴘʟʏ ᴛᴏ ᴜʀ ᴅᴏsᴛ's ᴍᴇssᴀɢᴇ ᴏʀ ɢɪᴠᴇ ᴜsᴇʀɴᴀᴍᴇ/ᴜsᴇʀ_ɪᴅ.**")
         user = message.text.split(None, 1)[1]
         if "@" in user:
             user = user.replace("@", "")
@@ -38,7 +38,7 @@ async def auth(client, message: Message, _):
         _check = await get_authuser_names(message.chat.id)
         count = len(_check)
         if int(count) == 20:
-            return await message.reply_text("**» ʏᴏᴜ ᴄᴀɴ ᴏɴʟʏ ʜᴀᴠᴇ 20 ᴜsᴇʀs ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ's ᴀᴜᴛʜᴏʀɪsᴇᴅ ᴜsᴇʀs ʟɪsᴛ (ᴀᴜʟ).**")
+            return await message.reply_text("**» ʏᴏᴜ ᴄᴀɴ ᴏɴʟʏ ʜᴀᴠᴇ 20 ᴅᴏsᴛ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ's ᴀᴜᴛʜᴏʀɪsᴇᴅ ᴜsᴇʀs ʟɪsᴛ (ᴀᴜʟ).**")
         if token not in _check:
             assis = {
                 "auth_user_id": user.id,
@@ -51,10 +51,10 @@ async def auth(client, message: Message, _):
                 if user.id not in get:
                     get.append(user.id)
             await save_authuser(message.chat.id, token, assis)
-            await message.reply_sticker("CAACAgUAAxkBAAIjRmKPXjN-4bwPCXyRDgQJi4EGns7mAALxBwACXqhRVO2OaCyX0hkNJAQ")
-            return await message.reply_text("**» ᴀᴅᴅᴇᴅ ᴛᴏ ᴀᴜᴛʜᴏʀɪsᴇᴅ ᴜsᴇʀs ʟɪsᴛ ᴏꜰ ʏᴏᴜʀ ɢʀᴏᴜᴘ.**")
+            await message.reply_sticker("CAACAgQAAxkBAAENb_ljjPE3QJ09A46M1kCdjQ5J7pTIrwACFgsAAkRkwFBtfDE184R3RysE")
+            return await message.reply_text("**» 🥳 ᴀᴅᴅᴇᴅ ᴛᴏ ᴀᴜᴛʜᴏʀɪsᴇᴅ ᴅᴏsᴛ ʟɪsᴛ ᴏꜰ ʏᴏᴜʀ ɢʀᴏᴜᴘ.**")
         else:
-            await message.reply_text("**» ᴀʟʀᴇᴀᴅʏ ɪɴ ᴛʜᴇ ᴀᴜᴛʜᴏʀɪsᴇᴅ ᴜsᴇʀs ʟɪsᴛ.**")
+            await message.reply_text("**» 😒 ᴅᴏsᴛ ᴀʟʀᴇᴀᴅʏ ɪɴ ᴛʜᴇ ᴀᴜᴛʜᴏʀɪsᴇᴅ ᴜsᴇʀs ʟɪsᴛ.**")
         return
     from_user_id = message.from_user.id
     user_id = message.reply_to_message.from_user.id
@@ -66,7 +66,7 @@ async def auth(client, message: Message, _):
     for smex in _check:
         count += 1
     if int(count) == 20:
-        return await message.reply_text("**» ʏᴏᴜ ᴄᴀɴ ᴏɴʟʏ ʜᴀᴠᴇ 20 ᴜsᴇʀs ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ's ᴀᴜᴛʜᴏʀɪsᴇᴅ ᴜsᴇʀs ʟɪsᴛ (ᴀᴜʟ).**")
+        return await message.reply_text("**» ʏᴏᴜ ᴄᴀɴ ᴏɴʟʏ ʜᴀᴠᴇ 20 ᴅᴏsᴛ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ's ᴀᴜᴛʜᴏʀɪsᴇᴅ ᴜsᴇʀs ʟɪsᴛ (ᴀᴜʟ).**")
     if token not in _check:
         assis = {
             "auth_user_id": user_id,
@@ -79,10 +79,10 @@ async def auth(client, message: Message, _):
             if user_id not in get:
                 get.append(user_id)
         await save_authuser(message.chat.id, token, assis)
-        await message.reply_sticker("CAACAgUAAxkBAAIjRmKPXjN-4bwPCXyRDgQJi4EGns7mAALxBwACXqhRVO2OaCyX0hkNJAQ")
-        return await message.reply_text("**» ᴀᴅᴅᴇᴅ ᴛᴏ ᴀᴜᴛʜᴏʀɪsᴇᴅ ᴜsᴇʀs ʟɪsᴛ ᴏꜰ ʏᴏᴜʀ ɢʀᴏᴜᴘ.**")
+        await message.reply_sticker("CAACAgQAAxkBAAENb_ljjPE3QJ09A46M1kCdjQ5J7pTIrwACFgsAAkRkwFBtfDE184R3RysE")
+        return await message.reply_text("**»🥳 ᴀᴅᴅᴇᴅ ᴛᴏ ᴀᴜᴛʜᴏʀɪsᴇᴅ ᴜsᴇʀs ᴅᴏsᴛ ʟɪsᴛ ᴏꜰ ʏᴏᴜʀ ɢʀᴏᴜᴘ.**")
     else:
-        await message.reply_text("**» ᴀʟʀᴇᴀᴅʏ ɪɴ ᴛʜᴇ ᴀᴜᴛʜᴏʀɪsᴇᴅ ᴜsᴇʀs ʟɪsᴛ.**")
+        await message.reply_text("**» 😒 ᴅᴏsᴛ ᴀʟʀᴇᴀᴅʏ ɪɴ ᴛʜᴇ ᴀᴜᴛʜᴏʀɪsᴇᴅ ᴜsᴇʀs ʟɪsᴛ.**")
 
 
 @app.on_message(
@@ -107,7 +107,7 @@ async def unauthusers(client, message: Message, _):
             if user.id in get:
                 get.remove(user.id)
         if deleted:
-            await message.reply_sticker("CAACAgUAAxkBAAIjQWKPXN20bTyku-xHuWi1piQjwfnqAALVBAACkG4oV_eRTF-VyhGfJAQ")
+            await message.reply_sticker("CAACAgQAAxkBAAENcTFjjXkxvVWb4VHVLYElXLcjs3aNJAACZQsAAg4FiVOMuBtqCz50ISsE")
             return await message.reply_text("**» ʀᴇᴍᴏᴠᴇᴅ ꜰʀᴏᴍ ᴀᴜᴛʜᴏʀɪsᴇᴅ ᴜsᴇʀs ʟɪsᴛ ᴏꜰ ᴛʜɪs ɢʀᴏᴜᴘ.**")
         else:
             return await message.reply_text("**» ᴛᴀʀɢᴇᴛᴇᴅ ᴜsᴇʀ ɪs ɴᴏᴛ ᴀɴ ᴀᴜᴛʜᴏʀɪsᴇᴅ ᴜsᴇʀ.**")
@@ -119,8 +119,8 @@ async def unauthusers(client, message: Message, _):
         if user_id in get:
             get.remove(user_id)
     if deleted:
-        await message.reply_sticker("CAACAgUAAxkBAAIjQWKPXN20bTyku-xHuWi1piQjwfnqAALVBAACkG4oV_eRTF-VyhGfJAQ")
-        return await message.reply_text("**» ʀᴇᴍᴏᴠᴇᴅ ꜰʀᴏᴍ ᴀᴜᴛʜᴏʀɪsᴇᴅ ᴜsᴇʀs ʟɪsᴛ ᴏꜰ ᴛʜɪs ɢʀᴏᴜᴘ.**")
+        await message.reply_sticker("CAACAgQAAxkBAAENcTFjjXkxvVWb4VHVLYElXLcjs3aNJAACZQsAAg4FiVOMuBtqCz50ISsE")
+        return await message.reply_text("**»🌚 ʀᴇᴍᴏᴠᴇᴅ ꜰʀᴏᴍ ᴀᴜᴛʜᴏʀɪsᴇᴅ ᴜsᴇʀs ʟɪsᴛ ᴏꜰ ᴛʜɪs ɢʀᴏᴜᴘ.**")
     else:
         return await message.reply_text("**» ᴛᴀʀɢᴇᴛᴇᴅ ᴜsᴇʀ ɪs ɴᴏᴛ ᴀɴ ᴀᴜᴛʜᴏʀɪsᴇᴅ ᴜsᴇʀ.**")
 
@@ -134,10 +134,10 @@ async def unauthusers(client, message: Message, _):
 async def authusers(client, message: Message, _):
     _playlist = await get_authuser_names(message.chat.id)
     if not _playlist:
-        return await message.reply_text("**» ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ... ꜰᴇᴛᴄʜɪɴɢ ᴀᴜᴛʜᴏʀɪsᴇᴅ ᴜsᴇʀs !**")
+        return await message.reply_text("**» 🥱 ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ... ꜰᴇᴛᴄʜɪɴɢ ᴀᴜᴛʜᴏʀɪsᴇᴅ ᴜsᴇʀs !**")
     else:
         j = 0
-        mystic = await message.reply_text("**» ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ... \n\nꜰᴇᴛᴄʜɪɴɢ ᴀᴜᴛʜᴏʀɪsᴇᴅ ᴜsᴇʀs...**")
+        mystic = await message.reply_text("**» 🥱 ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ... \n\nꜰᴇᴛᴄʜɪɴɢ ᴀᴜᴛʜᴏʀɪsᴇᴅ ᴜsᴇʀs...**")
         text = "**ᴀᴜᴛʜᴏʀɪsᴇᴅ ᴜsᴇʀs ʟɪsᴛ :**\n\n"
         for note in _playlist:
             _note = await get_authuser(message.chat.id, note)
