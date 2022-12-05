@@ -18,7 +18,7 @@ def AdminRightsCheck(mystic):
         if await is_maintenance() is False:
             if message.from_user.id not in SUDOERS:
                 return await message.reply_text(
-                    "» ʙᴏᴛ ɪs ᴜɴᴅᴇʀ ᴍᴀɪɴᴛᴇɴᴀɴᴄᴇ ғᴏʀ sᴏᴍᴇ ᴛɪᴍᴇ, ᴩʟᴇᴀsᴇ ᴠɪsɪᴛ sᴜᴩᴩᴏʀᴛ ᴄʜᴀᴛ ᴛᴏ ᴋɴᴏᴡ ᴛʜᴇ ʀᴇᴀsᴏɴ."
+                    "» ᴅᴏsᴛ ʙᴏᴛ ɪs ᴜɴᴅᴇʀ ᴍᴀɪɴᴛᴇɴᴀɴᴄᴇ ғᴏʀ sᴏᴍᴇ ᴛɪᴍᴇ, ᴩʟᴇᴀsᴇ ᴠɪsɪᴛ sᴜᴩᴩᴏʀᴛ ᴄʜᴀᴛ ᴛᴏ ᴋɴᴏᴡ ᴛʜᴇ ʀᴇᴀsᴏɴ."
                 )
         if await is_commanddelete_on(message.chat.id):
             try:
@@ -35,8 +35,8 @@ def AdminRightsCheck(mystic):
                 [
                     [
                         InlineKeyboardButton(
-                            text="ʜᴏᴡ ᴛᴏ ғɪx ᴛʜɪs ?",
-                            callback_data="ᴄʀᴀxʏ_ʙᴏɪ",
+                            text="ᴅᴏsᴛ ʜᴏᴡ ᴛᴏ ғɪx ᴛʜɪs ?",
+                            callback_data="Craxy_boi",
                         ),
                     ]
                 ]
@@ -75,7 +75,7 @@ def AdminActual(mystic):
         if await is_maintenance() is False:
             if message.from_user.id not in SUDOERS:
                 return await message.reply_text(
-                    "» ʙᴏᴛ ɪs ᴜɴᴅᴇʀ ᴍᴀɪɴᴛᴇɴᴀɴᴄᴇ ғᴏʀ sᴏᴍᴇ ᴛɪᴍᴇ, ᴩʟᴇᴀsᴇ ᴠɪsɪᴛ sᴜᴩᴩᴏʀᴛ ᴄʜᴀᴛ ᴛᴏ ᴋɴᴏᴡ ᴛʜᴇ ʀᴇᴀsᴏɴ."
+                    "» ᴅᴏsᴛ ʙᴏᴛ ɪs ᴜɴᴅᴇʀ ᴍᴀɪɴᴛᴇɴᴀɴᴄᴇ ғᴏʀ sᴏᴍᴇ ᴛɪᴍᴇ, ᴩʟᴇᴀsᴇ ᴠɪsɪᴛ sᴜᴩᴩᴏʀᴛ ᴄʜᴀᴛ ᴛᴏ ᴋɴᴏᴡ ᴛʜᴇ ʀᴇᴀsᴏɴ."
                 )
         if await is_commanddelete_on(message.chat.id):
             try:
@@ -92,8 +92,8 @@ def AdminActual(mystic):
                 [
                     [
                         InlineKeyboardButton(
-                            text="ʜᴏᴡ ᴛᴏ ғɪx ᴛʜɪs ?",
-                            callback_data="CraxymousAdmin",
+                            text="ᴅᴏsᴛ ʜᴏᴡ ᴛᴏ ғɪx ᴛʜɪs ?",
+                            callback_data="Craxy_boi",
                         ),
                     ]
                 ]
@@ -120,7 +120,7 @@ def ActualAdminCB(mystic):
         if await is_maintenance() is False:
             if CallbackQuery.from_user.id not in SUDOERS:
                 return await CallbackQuery.answer(
-                    "» ʙᴏᴛ ɪs ᴜɴᴅᴇʀ ᴍᴀɪɴᴛᴇɴᴀɴᴄᴇ ғᴏʀ sᴏᴍᴇ ᴛɪᴍᴇ, ᴩʟᴇᴀsᴇ ᴠɪsɪᴛ sᴜᴩᴩᴏʀᴛ ᴄʜᴀᴛ ᴛᴏ ᴋɴᴏᴡ ᴛʜᴇ ʀᴇᴀsᴏɴ.",
+                    "» ᴅᴏsᴛ ʙᴏᴛ ɪs ᴜɴᴅᴇʀ ᴍᴀɪɴᴛᴇɴᴀɴᴄᴇ ғᴏʀ sᴏᴍᴇ ᴛɪᴍᴇ, ᴩʟᴇᴀsᴇ ᴠɪsɪᴛ sᴜᴩᴩᴏʀᴛ ᴄʜᴀᴛ ᴛᴏ ᴋɴᴏᴡ ᴛʜᴇ ʀᴇᴀsᴏɴ.",
                     show_alert=True,
                 )
         try:
